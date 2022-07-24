@@ -1,0 +1,502 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px ;
+    margin: auto;
+}
+
+/*-------------------------------------------------navbar style---------------------------------------------------------*/
+.navbar{
+    background: rgb(8, 174, 224);
+    position: fixed;
+    padding: 10px 0;
+    width: 100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 999;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: rgb(5, 75, 97);
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.4s ease;
+} 
+.navbar .menu li a:hover{
+    color: rgb(2, 46, 59);
+}
+
+section{
+    padding: 100px 0;
+}
+
+/*------------------------------------------------title section----------------------------------------------------------*/
+section .title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 5px;
+    background: #111;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    background: #fff;
+    bottom: -10px;
+    left: 50%;
+    font-size: 15px;
+    color: rgb(8, 174, 224);
+    padding: 5px;
+    transform: translateX(-50%);
+}
+/*----------------------------------------- Home section ------- ------------------------------------------------------*/
+
+
+.home{
+    display: flex;
+    background: url("back1.jpg");
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    color: #fff;
+    min-height: 500px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 30px;
+}
+.home .home-content .text-2{
+    font-size: 70px;
+    font-weight: 600;
+    margin: -3px;
+}
+.home .home-content .text-3{
+    font-size: 35px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: rgb(8, 174, 224);
+    font-weight: 500;
+}
+
+/*-------------------------------------------------blender section-------------------------------------------------------*/
+.blender .title::after{
+    content: "About blender";
+}
+
+.blender .blender-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blender .blender-content .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.blender .blender-content .text span{
+    color: rgb(8, 174, 224);
+}
+
+.blender .blender-content p{
+    text-align: justify;
+    font-size: 22px;
+}
+
+.blender a{
+    display: inline-block;
+    background: rgb(8, 174, 224);
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border:  2px solid rgb(8, 174, 224);
+    transition: all 0.3s ease;
+}
+.blender a:hover{
+    color: rgb(8, 174, 224);
+    background: none;
+    border:  4px solid rgb(8, 174, 224);
+}
+
+section .title1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+section .title1::before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 5px;
+    background: #111;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .title1::after{
+    position: absolute;
+    background: #fff;
+    bottom: -10px;
+    left: 50%;
+    font-size: 15px;
+    color: rgb(8, 174, 224);
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.blender .title1::after{
+    content: "Lets see what i have done";
+}
+/*-------------------------------------------blender image section------------------------------------------------------*/
+.container{
+    width: 100%;
+    text-align: center;
+}
+.container h2{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+.container h2::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 4px;
+    background-color: #111;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 150px;
+    }
+    50%{
+        width: 250px;
+    }
+    100%{
+        width: 150px;
+    }
+}
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(151, 149, 149);
+    cursor: pointer;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+.pic::before{
+    content: 'Blender 2.90';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -108px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.pic::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgb(0,0,0,0.4);
+    transition:.3s;
+}
+.pic:hover::after{
+    height: 100%;
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+/*----------------------------------------------blender video section--------------------------------------------------*/
+.container1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+.container1 .main-video{
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+.container1 .main-video video{
+    width: 100%;
+    border-radius: 5px;
+}
+.container1 .main-video .title-video{
+    color: #333;
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.container1 .video-list{
+    background: #fff;
+    border-radius: 5px;
+    height: 520px;
+    overflow-y: scroll;
+}
+.container1 .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+.container1 .video-list::-webkit-scrollbar-track{
+    background: #ccc;
+    border-radius: 50px;
+}
+.container1 .video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+}
+
+.container1 .video-list .vid video{
+    width: 100px;
+    border-radius: 5px;
+}
+.container1 .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f7f7f7;
+    border-radius: 5px;
+    margin: 10xp;
+    padding: 10px;
+    border: 1px solid rgb(0,0,0,0.1);
+    cursor: pointer;
+}
+.container1 .video-list .vid:hover{
+    background: #eee;
+}
+.container1 .video-list .vid.active{
+    background: #2980b9;
+}
+.container1 .video-list .vid.active .title-video{
+    color: #fff;
+}
+.container1 .video-list .vid .title-video{
+    color: #333;
+    font-size: 17px;
+}
+
+/*------------------------------------------------corel draw-----------------------------------------------------------*/
+.corel .title::after{
+    content: "About CorelDraw";
+}
+
+.corel .corel-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.corel .corel-content .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.corel .corel-content .text span{
+    color: rgb(8, 174, 224);
+}
+
+.corel .corel-content p{
+    text-align: justify;
+    font-size: 22px;
+}
+
+.corel a{
+    display: inline-block;
+    background: rgb(8, 174, 224);
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border:  2px solid rgb(8, 174, 224);
+    transition: all 0.3s ease;
+}
+.corel a:hover{
+    color: rgb(8, 174, 224);
+    background: none;
+    border:  4px solid rgb(8, 174, 224);
+}
+
+.photo-gallery-corel{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+.photo-gallery-corel .pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(151, 149, 149);
+    cursor: pointer;
+}
+.photo-gallery-corel .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.photo-gallery-corel .pic::before{
+    content: 'CorelDraw v24';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -108px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.photo-gallery-corel .pic::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgb(0,0,0,0.4);
+    transition:.3s;
+}
+.photo-gallery-corel .pic:hover::after{
+    height: 100%;
+}
+.photo-gallery-corel .pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+/*-----------------------------------------footer section--------------------------------------------------------------*/
+
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: rgb(8, 174, 224);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/*--------------------------------------------warning-----------------------------------------------------------------*/
+.warning {
+    background: #333;
+    height: 100%;
+    width: 100%;
+}
+.warning h1{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 500;
+    margin-left: 390px;
+    margin-right: 250px;
+    margin-top: 100px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width:991px){
+    .container1{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+}
+@media (max-width:768px){
+    .container1{
+        grid-template-columns: 1fr;
+    }
+}
